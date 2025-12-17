@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* Main Container */
+.todo-container {
+    width: 100%;
+    max-width: 420px;
+    margin: 80px auto;
+    padding: 24px;
+    background: #1e1e1e;
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Heading */
+.todo-container h2 {
+    text-align: center;
+    color: #f5b041;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Inputs */
+.todo-container input[type='text'] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+/* Buttons (Global) */
+button {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    opacity: 0.95;
+}
+
+/* First button (Add / Update) */
+.todo-container > button,
+.todo-container div > button {
+    width: 100%;
+    margin-bottom: 15px;
+    background: #f39c12;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Todo List */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Todo Item */
+li {
+    background: #2a2a2a;
+    padding: 12px 14px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    word-break: break-word;
+}
+
+/* Buttons inside list */
+li div {
+    display: flex;
+    gap: 8px;
+}
+
+/* Delete button */
+li button:first-child {
+    background: #e74c3c;
+    color: #fff;
+    white-space: nowrap;
+}
+
+/* Edit button */
+li button:last-child {
+    background: #3498db;
+    color: #fff;
+}
+
+/* Hover effect on todo */
+li:hover {
+    background: #333;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .todo-container {
+        width: auto;
+        margin: 40px 15px ;
+        padding: 15px;
+        
+
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    li div {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
+
+
+
